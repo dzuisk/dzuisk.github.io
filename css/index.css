@@ -5,14 +5,14 @@
     list-style: none;
 }
 
-@media screen and (max-width : 1150px){
+/* @media screen and (max-width : 1150px){
     body {
         background-color: #111;
     }
     .main {
         flex-direction: column;
     }
-}
+} */
 
 .main {
     width: 100%;
