@@ -1,50 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/output.css" rel="stylesheet">
+  <!-- npx tailwindcss -i ./css/input.css -o ./css/output.css --watch -->
 </head>
-<body>
-    <div class="main">
-        <div class="introduction wrapper">
-            <img src="./images/偷摸零.jpg">
-            <div class="text">
-                <h1>dzu's personal webpage</h1>
-                <ul>
-                    <li>email : dzu166831@gmail.com</li>
-                    <li>QQ : 1754141938 (work)</li>
-                    <li>WeChat : Y3027_</li>
-                    <li>Major Intelligent Manufacturing Engineering Technic</li>
-                </ul>
-            </div>
-            <div class="footer">
-                <div>inspired by bento.me</div>
-                <div>coded with ♥️ by dzu</div>
-            </div>
-        </div>
-        <div class="about">
-            <h4>About Me</h4>
-            <div class="cards">
-                <ul>
-                    <li class="card-long text1">
-                        深圳职业技术大学<br>
-                        智能制造工程技术<br>
-                        本科在读（2024——2028）<br>
-                        潮汕人 重度甜食爱好者 不吃海鲜河鲜<br>
-                        高数苦手 爱打游戏 不玩FPS、MOBA
-                    </li>
-                    <a href="https://www.szpu.edu.cn" target="_blank"><li class="card-short szpu"></li></a>
-                    <li class="card-short"></li>
-                    <a href="https://y.qq.com/n/ryqq/playlist/3716229321" target="_blank" class="qqmusic_link"><li class="card-short qqmusic"><br><br><br><br>dzu的收藏歌单<br><span>https://y.qq.com/n/ryqq/ <br> playlist/3716229321</span></li></a>
-                    <li class="card-long"></li>
-                    <li class="card-long"></li>
-                    <li class="card-short"></li>
-                </ul>
-            </div>
-        </div>
+<body class="bg-blue-100 dark:bg-[#222] flex">
+  <div class="mt-12.5 ml-10">
+    <!-- Avatar -->
+    <img src="./image/偷摸零.jpg " alt="" class=" w-[130px] rounded-full ">
+    <!-- Introducing card -->
+    <div class="card-body w-[300px] h-[300px] self-center bg-[#082949] mt-[30px] rounded-[20px] border border-[#ccc]">
+        <h2 class="text-white font-sans font-bold mt-[30px] ml-[30px] mb-[20px] text-[32px] w-[260px]">dzu</h2>
+        <div class="text-white font-inter font-normal ml-[20px] text-[14px]leading-[22px] w-[260px] h-[180px]">
+            18.y.o. / male / student / ESTJ<br>
+            Electronic enthusiast from China<br>
+            Undergraduate students of SZPU<br>
+            Studying programing.<br>
+            Looking forward to make friend with you.<br>
+            this web is inspired by bento.me</div>
     </div>
+    <!-- More -->
+    <div class="w-[300px] h-[36px] self-center border border-white rounded-[10px] bg-[#404040] mt-[20px] mb-[20px]">
+        <div class="text-white text-[18px] font-semibold pl-[20px] leading-[36px]">More</div>
+    </div>
+    <!-- cards -->
+    <div class="flex flex-row flex-wrap justify-center">
+        <!-- SZPU -->
+        <div class="w-[135px] h-[135px] rounded-[20px] bg-[#404040] mb-[20px] border border-white mr-[30px]">
+            <a href="https://www.szpu.edu.cn/"><img src="./image/szpu.png" alt="" class="rounded-[20px]"></a>
+        </div>
+        <!-- Github -->
+        <div class="w-[135px] h-[135px] rounded-[20px] bg-[#404040] mb-[20px] border border-white">
+            <img src="./svg/github.svg" alt="" class="ml-[9px] mt-[9px] w-[50px] h-[50px] filter brightness-0 invert">
+            <div class="text-[14px] text-white ml-[15px] mt-[8px]">dzu's Github</div>
+            <a href="https://github.com/dzuisk/">
+                <div class="w-[60px] h-[25px] bg-[#fff] ml-[15px] mt-[8px] rounded-[5px] font-[12px] text-center leading-[25px] font-sans">Visit</div>
+            </a>
+        </div>
+  </div>
 </body>
 </html>
