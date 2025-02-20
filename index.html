@@ -1,44 +1,112 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/output.css" rel="stylesheet">
-  <!-- npx tailwindcss -i ./css/input.css -o ./css/output.css --watch -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./image/偷摸零.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/pc/output.css">
+    <style>
+        .text-shadow {text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
+    </style>
+    <link rel="stylesheet" href="./css/player.css">
 </head>
-<body class="bg-blue-100 dark:bg-[#222] flex justify-center">
-  <div class="mt-12.5 ">
-    <!-- Avatar -->
-    <img src="./image/偷摸零.jpg " alt="" class=" w-[130px] rounded-full ">
-    <!-- Introducing card -->
-    <div class="card-body w-[300px] h-[300px] self-center bg-[#082949] mt-[30px] rounded-[20px] border border-[#ccc]">
-        <h2 class="text-white font-sans font-bold mt-[30px] ml-[30px] mb-[20px] text-[32px] w-[260px]">dzu</h2>
-        <div class="text-white font-inter font-normal ml-[20px] text-[14px]leading-[22px] w-[260px] h-[180px]">
-            18.y.o. / male / student / ESTJ<br>
-            Electronic enthusiast from China<br>
-            Undergraduate students of SZPU<br>
-            Studying programing.<br>
-            Looking forward to make friend with you.<br>
-            this web is inspired by bento.me</div>
+<body class="bg-[#DBEAFE] dark:bg-[#404040] overflow-y-auto overflow-x-scroll">
+    <!-- intro -->
+    <div class="w-[1200px] h-[620px] flex flex-col justify-center items-center text-center m-auto mt-[100px]">
+        <img src="./image/偷摸零.jpg" alt="" class="center w-[250px] rounded-full">
+        <div class="text-[#082949] font-black font-[Inter]">
+            <span class=" text-[96px]">Hello I’m dzu👋<br></span>
+            <span class=" text-[64px]">An electronic enthusiast from China<br></span>
+            <span class=" text-[80px]">18 y.o. / male / student / ESTJ</span>
+        </div>
     </div>
     <!-- More -->
-    <div class="w-[300px] h-[36px] self-center border border-white rounded-[10px] bg-[#404040] mt-[20px] mb-[20px]">
-        <div class="text-white text-[18px] font-semibold pl-[20px] leading-[36px]">More</div>
-    </div>
+    <div class="m-auto text-[20px] text-[#082949] font-black font-[Inter] mt-[100px] text-center">More</div>
     <!-- cards -->
-    <div class="flex flex-row flex-wrap justify-center">
-        <!-- SZPU -->
-        <div class="w-[135px] h-[135px] rounded-[20px] bg-[#404040] mb-[20px] border border-white mr-[30px]">
-            <a href="https://www.szpu.edu.cn/"><img src="./image/szpu.png" alt="" class="rounded-[20px]"></a>
+    <div class="flex m-auto justify-center text-center items-center mt-[300px] mb-[50px]">
+        <!-- left -->
+        <div class="w-[725px] flex mr-[22px] flex-wrap">
+            <!-- QQMusic -->
+            <div class="w-[218px] h-[218px] bg-[#9DC7FF] shadow-xl rounded-[20px] mr-[20px] mb-[20px]">
+                <img src="./svg/QQ音乐.svg" alt="" class="w-[80px] ml-[15px] mt-[15px]">
+                <div class="font-[Inter] text-[22px] text-white mt-[13px] ml-[25px] text-left text-shadow">dzu's favourites</div>
+                <a href="">
+                    <div class="w-[80px] h-[40px] bg-white font-[Inter] text-[18px] text-[#404040] text-center ml-[24px] mt-[13px] rounded-[10px] leading-[40px]">Enjoy</div>
+                </a>
+            </div>
+            <!-- MusicPlayer -->
+            <div class="w-[486px] h-[218px] bg-[#9DC7FF] shadow-xl rounded-[20px] mb-[20px] flex flex-wrap relative">
+                <!-- 播放器主体 -->
+                <img id="albumArt" src="./image/ReRe.jpeg" alt="封面" 
+                    class="w-[170px] h-[170px] ml-[20px] mt-[23.8px] rounded-[10px] object-cover">        
+                <div class="information flex-1">
+                    <div id="songTitle" class="text-[28px] text-[#FFF] font-[Inter] text-shadow mt-[20px] ml-[20px] text-left">Re:Re:</div>
+                    <div id="songArtist" class="text-[24px] text-[#FFF] font-[Inter] text-shadow ml-[20px] text-left">結束バンド</div>            
+                    <!-- 控制按钮 -->
+                    <div class="buttons mt-[15px] ml-[58px] flex">
+                        <button id="prevBtn" class="hover:scale-110 transition-transform">
+                            <img src="./svg/bg-previous.svg" class="w-[40px] h-[40px] mr-[27px] invert brightness-0 drop-shadow-lg">
+                        </button>
+                        <button id="playBtn" class="hover:scale-110 transition-transform">
+                            <img src="./svg/bg-play.svg" class="w-[40px] h-[40px] mr-[27px] invert brightness-0 drop-shadow-lg">
+                        </button>
+                        <button id="nextBtn" class="hover:scale-110 transition-transform">
+                            <img src="./svg/bg-next.svg" class="w-[40px] h-[40px] invert brightness-0 drop-shadow-lg">
+                        </button>
+                    </div>
+                    <!-- 进度条 -->
+                    <div class="ml-[20px] mt-[28px] w-[250px]">
+                        <input type="range" id="progress" min="0" max="100" value="0" 
+                            class="w-full h-[7px] bg-[#D9D9D9] rounded-full appearance-none
+                                    [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] 
+                                    [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#1DC3FF] 
+                                    [&::-webkit-slider-thumb]:rounded-full">
+                    </div>
+                </div>
+                <!-- 歌单按钮 -->
+                <button id="songListBtn" class="absolute top-[15px] right-[15px] hover:brightness-100 transition-all">
+                    <img src="./svg/歌单.svg" class="w-[40px] h-[40px] invert brightness-0 drop-shadow-lg">
+                </button>
+                <!-- 修改歌单列表的HTML结构 -->
+                <div id="songList" class="absolute bottom-full right-0 w-full bg-white rounded-t-lg shadow-xl overflow-hidden">
+                    <ul id="playlist" class="divide-y"></ul>
+                </div>
+            </div>
+            <audio id="audioPlayer"></audio>
+            <!-- SelfIntroduction -->
+            <div class="w-[725px] h-[340px] bg-[#9DC7FF] shadow-xl rounded-[20px]">
+                <div class="mt-[10px] ml-[25px] text-left text-[26px] font-[Inter] text-white text-shadow">
+                    Self introduction<br>
+                    🌍: Mandarin/English/Teochew/Cantoness(a little)<br>
+                    📖: Studying undergraduate in SZPU.<br>
+                    🎵: Enjoying Vocaloid, ACG and J-Pop.<br>
+                    🎮: Play many kinds of games but poor skills.<br>
+                    📷: Take photos at will.<br>
+                    🌱: Studying programing.<br>
+                    ⚡️: Like to create and play!
+                </div>
+            </div>
         </div>
-        <!-- Github -->
-        <div class="w-[135px] h-[135px] rounded-[20px] bg-[#404040] mb-[20px] border border-white">
-            <img src="./svg/github.svg" alt="" class="ml-[9px] mt-[9px] w-[50px] h-[50px] filter brightness-0 invert">
-            <div class="text-[14px] text-white ml-[15px] mt-[8px]">dzu's Github</div>
-            <a href="https://github.com/dzuisk/">
-                <div class="w-[60px] h-[25px] bg-[#fff] ml-[15px] mt-[8px] rounded-[5px] font-[12px] text-center leading-[25px] font-sans">Visit</div>
+        <!-- right -->
+        <div class="w-[458px] flex flex-wrap">
+            <!-- Image -->
+            <img src="./image/希儿.png" alt="" class="w-[458px] h-[340px] shadow-xl rounded-[20px] object-cover mb-[20px]">
+            <!-- SZPU -->
+            <a href="https://www.szpu.edu.cn/" target="_blank">
+                <img src="./image/szpu.png" alt="" class="w-[218px] h-[218px] shadow-xl rounded-[20px] object-cover mr-[20px]">
             </a>
+            <!-- Github -->
+            <div class="w-[218px] h-[218px] shadow-xl rounded-[20px] bg-[#FFF]">
+                <img src="./svg/github.svg" alt="" class="w-[80px] ml-[15px] mt-[15px]">
+                <div class="font-[Inter] text-[22px] text-[#404040] mt-[12px] ml-[24px] text-left">dzu's Github</div>
+                <a href="https://github.com/dzuisk/" target="_blank">
+                    <div class="w-[80px] h-[40px] bg-[#404040] font-[Inter] text-[18px] text-[#FFF] text-center ml-[24px] mt-[12px] rounded-[10px] leading-[40px]">Visit</div>
+                </a>
+            </div>
         </div>
-  </div>
+    </div>
+ 
+<script src="./js/player.js"></script>
 </body>
 </html>
