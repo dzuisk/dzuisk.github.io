@@ -33,7 +33,7 @@ const audioFiles = [
         cover: './image/里表情人.jpg',
         title: '裏表ラバーズ',
         artist: 'wowaka 初音ミク'
-    },
+    }
     // {
     //     path: './audio/アンノウン・マザーグース - wowaka 初音ミク.mp3',
     //     cover: './image/不为人知的鹅妈妈童谣.jpg',
