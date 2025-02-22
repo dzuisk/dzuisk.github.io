@@ -10,12 +10,12 @@ const audioFiles = [
         title: 'Re:Re:',
         artist: '結束バンド'
     },
-    // {
-    //     path: './audio/転がる岩、君に朝が降る - 結束バンド.mp3',
-    //     cover: './image/翻转岩石，晨光洒落你身.jpg',
-    //     title: '転がる岩、君に朝が降る',
-    //     artist: '結束バンド'
-    // },
+    {
+        path: './audio/転がる岩、君に朝が降る - 結束バンド.mp3',
+        cover: './image/翻转岩石，晨光洒落你身.jpg',
+        title: '転がる岩、君に朝が降る',
+        artist: '結束バンド'
+    },
     {
         path: './audio/春日影 - CRYCHIC.mp3',
         cover: './image/春日影 - CRYCHIC.jpg',
@@ -33,13 +33,13 @@ const audioFiles = [
         cover: './image/里表情人.jpg',
         title: '裏表ラバーズ',
         artist: 'wowaka 初音ミク'
-    }
-    // {
-    //     path: './audio/アンノウン・マザーグース - wowaka 初音ミク.mp3',
-    //     cover: './image/不为人知的鹅妈妈童谣.jpg',
-    //     title: 'アンノウン・マザーグース',
-    //     artist: 'wowaka 初音ミク'
-    // },
+    },
+    {
+        path: './audio/アンノウン・マザーグース - wowaka 初音ミク.mp3',
+        cover: './image/不为人知的鹅妈妈童谣.jpg',
+        title: 'アンノウン・マザーグース',
+        artist: 'wowaka 初音ミク'
+    },
 ];
 
 // 初始化播放列表

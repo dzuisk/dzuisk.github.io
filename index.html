@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dzu's personal webpage</title>
     <link rel="shortcut icon" href="./image/偷摸零.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/pc/output.css">
+    <link rel="stylesheet" href="./css/output.css">
     <style>
         .text-shadow {text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
     </style>
@@ -13,70 +13,74 @@
 </head>
 <body class="bg-[#DBEAFE] dark:bg-[#222] overflow-y-auto overflow-x-scroll">
     <!-- intro -->
-    <div class="w-[1200px] h-[620px] flex flex-col justify-center items-center text-center m-auto mt-[100px]">
-        <img src="./image/偷摸零.jpg" alt="" class="center w-[250px] rounded-full">
+    <div class="w-[88vw] h-[150vw] xl:w-[1200px] xl:h-[620px] flex flex-col justify-center items-center text-center m-auto mt-[5vw] lg:mt-[100px]">
+        <img src="./image/偷摸零.jpg" alt="" class="center w-[32vw] xl:w-[250px] rounded-full">
         <div class="text-[#082949] font-black font-[Inter]">
-            <span class=" text-[96px] dark:text-white">Hello I’m dzu👋<br></span>
-            <span class=" text-[64px] dark:text-white">An electronic enthusiast from China<br></span>
-            <span class=" text-[80px] dark:text-white">18 y.o. / male / student / ESTJ</span>
+            <span class="text-[9vw] xl:text-[96px] dark:text-white">Hello I’m dzu👋<br></span>
+            <span class="text-[4.5vw] xl:text-[64px] dark:text-white">An electronic enthusiast from China<br></span>
+            <span class="text-[4.5vw] xl:text-[80px] dark:text-white">18 y.o. / male / student / ESTJ</span>
         </div>
     </div>
     <!-- More -->
-    <div class="m-auto text-[20px] text-[#082949] font-black font-[Inter] mt-[100px] text-center dark:text-white">More</div>
+    <div class="m-auto text-[20px] text-[#082949] font-black font-[Inter] mt-[10vw] lg:mt-[100px] text-center dark:text-white">More</div>
     <!-- cards -->
-    <div class="flex m-auto justify-center text-center items-center mt-[300px] mb-[50px]">
+    <div class="xl:flex m-auto justify-center text-center items-center mt-[10vw] xl:mt-[300px] xl:mb-[50px]">
         <!-- left -->
-        <div class="w-[725px] flex mr-[22px] flex-wrap">
+        <div class="w-[725px] xl:flex xl:mr-[22px] xl:ml-0 ml-[9vw] flex-wrap center"> 
             <!-- QQMusic -->
-            <div class="w-[218px] h-[218px] bg-[#9DC7FF] shadow-xl rounded-[20px] mr-[20px] mb-[20px] dark:bg-[#404040]">
+            <div class="hidden xl:inline-block xl:w-[218px] xl:h-[218px] bg-[#9DC7FF] shadow-xl rounded-[20px] mr-[20px] mb-[20px] dark:bg-[#404040]">
                 <img src="./svg/QQ音乐.svg" alt="" class="w-[80px] ml-[15px] mt-[15px]">
                 <div class="font-[Inter] text-[22px] text-white mt-[13px] ml-[25px] text-left text-shadow">dzu's favourites</div>
-                <a href="">
+                <a href="https://y.qq.com/n/ryqq/playlist/3716229321" target="_blank">
                     <div class="w-[80px] h-[40px] bg-white font-[Inter] text-[18px] text-[#404040] text-center ml-[24px] mt-[13px] rounded-[10px] leading-[40px]">Enjoy</div>
                 </a>
             </div>
             <!-- MusicPlayer -->
-            <div class="w-[486px] h-[218px] bg-[#9DC7FF] dark:bg-[#404040]   shadow-xl rounded-[20px] mb-[20px] flex flex-wrap relative">
+            <div class="w-[80vw] h-[40vw] xl:w-[486px] xl:h-[218px] bg-[#9DC7FF] dark:bg-[#404040] shadow-xl rounded-[20px] mb-[20px] flex flex-wrap relative">
                 <!-- 播放器主体 -->
+                <!-- 封面 -->
                 <img id="albumArt" src="./image/ReRe.jpeg" alt="封面" 
-                    class="w-[170px] h-[170px] ml-[20px] mt-[23.8px] rounded-[10px] object-cover">        
-                <div class="information w-[240px]">
-                    <div id="songTitle" class="text-[24px] text-[#FFF] font-[Inter] text-shadow mt-[20px] ml-[20px] text-left">Re:Re:</div>
-                    <div id="songArtist" class="text-[20px] text-[#FFF] font-[Inter] text-shadow ml-[20px] text-left">結束バンド</div>            
+                    class="w-[31vw] h-[31vw] mt-[4.33vw] ml-[3.2vw] xl:w-[170px] xl:h-[170px] xl:ml-[20px] xl:mt-[23.8px] rounded-[10px] object-cover">
+                <div class="main w-[35vw] xl:w-[240px]">
+                    <!-- 歌曲信息 -->
+                    <div class="information xl:min-h-0 min-h-[17.5vw]">
+                        <div id="songTitle" class="text-[4.2vw] xl:text-[24px] text-[#FFF] font-[Inter] text-shadow mt-[4vw] ml-[3.46vw] xl:mt-[20px] xl:ml-[20px] text-left">Re:Re:</div>
+                        <div id="songArtist" class="text-[3vw] xl:text-[20px] text-[#FFF] font-[Inter] text-shadow ml-[3.46vw] xl:ml-[20px] text-left">結束バンド</div>
+                    </div>            
                     <!-- 控制按钮 -->
-                    <div class="buttons mt-[30px] ml-[58px] flex">
+                    <div class="buttons mt-[1vw] ml-[9vw] xl:mt-[30px] xl:ml-[58px] flex">
                         <button id="prevBtn" class="hover:scale-110 transition-transform">
-                            <img src="./svg/bg-previous.svg" class="w-[40px] h-[40px] mr-[27px] invert brightness-0 drop-shadow-lg">
+                            <img src="./svg/bg-previous.svg" class="w-[7.46vw] h-[7.46vw] xl:w-[40px] xl:h-[40px] mr-[10vw] xl:mr-[27px] invert brightness-0 drop-shadow-lg">
                         </button>
                         <button id="playBtn" class="hover:scale-110 transition-transform">
-                            <img src="./svg/bg-play.svg" class="w-[40px] h-[40px] mr-[27px] invert brightness-0 drop-shadow-lg">
+                            <img src="./svg/bg-play.svg" class="w-[7.46vw] h-[7.46vw] xl:w-[40px] xl:h-[40px] mr-[10vw] xl:mr-[27px] invert brightness-0 drop-shadow-lg">
                         </button>
                         <button id="nextBtn" class="hover:scale-110 transition-transform">
-                            <img src="./svg/bg-next.svg" class="w-[40px] h-[40px] invert brightness-0 drop-shadow-lg">
+                            <img src="./svg/bg-next.svg" class="w-[7.46vw] h-[7.46vw] xl:w-[40px] xl:h-[40px] mr-[10vw] xl:mr-0 invert brightness-0 drop-shadow-lg">
                         </button>
                     </div>
                     <!-- 进度条 -->
-                    <div class="ml-[20px] mt-[15px] w-[250px]">
+                    <div class="ml-[3.57vw] mt-[3vw] w-[38vw] xl:ml-[20px] xl:mt-[15px] xl:w-[250px]">
                         <input type="range" id="progress" min="0" max="100" value="0" 
-                            class="w-full h-[7px] bg-[#D9D9D9] rounded-full appearance-none
+                            class="w-full h-[1vw] xl:h-[7px] bg-[#D9D9D9] rounded-full appearance-none
                                     [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] 
                                     [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#1DC3FF] 
                                     [&::-webkit-slider-thumb]:rounded-full">
                     </div>
                 </div>
                 <!-- 歌单按钮 -->
-                <button id="songListBtn" class="absolute top-[15px] right-[15px] hover:brightness-100 transition-all">
-                    <img src="./svg/歌单.svg" class="w-[40px] h-[40px] invert brightness-0 drop-shadow-lg">
+                <button id="songListBtn" class="absolute top-[2.66vw] right-[2.66vw] xl:top-[15px] xl:right-[15px] hover:brightness-100 transition-all">
+                    <img src="./svg/歌单.svg" class="w-[7.5vw] h-[7.5vw] xl:w-[40px] xl:h-[40px] invert brightness-0 drop-shadow-lg">
                 </button>
                 <!-- 修改歌单列表的HTML结构 -->
-                <div id="songList" class="absolute bottom-full right-0 w-full bg-white rounded-t-lg shadow-xl overflow-hidden">
+                <div id="songList" class="absolute bottom-full right-0 w-2/3 bg-white rounded-t-lg shadow-xl overflow-hidden">
                     <ul id="playlist" class="divide-y"></ul>
                 </div>
             </div>
             <audio id="audioPlayer"></audio>
             <!-- SelfIntroduction -->
-            <div class="w-[725px] h-[340px] bg-[#9DC7FF] dark:bg-[#404040] shadow-xl rounded-[20px]">
-                <div class="mt-[10px] ml-[25px] text-left text-[26px] font-[Inter] text-white text-shadow">
+            <div class="w-[80vw] h-[40vw] xl:w-[725px] xl:h-[340px] bg-[#9DC7FF] dark:bg-[#404040] shadow-xl rounded-[20px]">
+                <div class="pt-[2vw] ml-[2.6vw] xl:pt-0 xl:mt-[10px] xl:ml-[25px] text-left text-[3vw] xl:text-[26px] font-[Inter] text-white text-shadow">
                     Self introduction<br>
                     🌍: Mandarin/English/Teochew/Cantoness(a little)<br>
                     📖: Studying undergraduate in SZPU.<br>
@@ -89,19 +93,19 @@
             </div>
         </div>
         <!-- right -->
-        <div class="w-[458px] flex flex-wrap">
+        <div class="w-[80vw] xl:w-[458px] mt-[3vw] xl:mt-0 flex flex-wrap justify-center xl:justify-normal mx-auto xl:mx-0 mb-[10vw] xl:mb-0">
             <!-- Image -->
-            <img src="./image/希儿.png" alt="" class="w-[458px] h-[340px] shadow-xl rounded-[20px] object-cover mb-[20px]">
+            <img src="./image/希儿.png" alt="" class="w-[80vw] xl:w-[458px] xl:h-[340px] shadow-xl rounded-[20px] object-cover mb-[20px]">
             <!-- SZPU -->
             <a href="https://www.szpu.edu.cn/" target="_blank">
-                <img src="./image/szpu.png" alt="" class="w-[218px] h-[218px] shadow-xl rounded-[20px] object-cover mr-[20px]">
+                <img src="./image/szpu.png" alt="" class="w-[37.33vw] h-[37.33-vw] xl:w-[218px] xl:h-[218px] shadow-xl rounded-[20px] object-cover mr-[5vw] xl:mr-[20px]">
             </a>
             <!-- Github -->
-            <div class="w-[218px] h-[218px] shadow-xl rounded-[20px] bg-[#FFF] dark:bg-[#404040]">
-                <img src="./svg/github.svg" alt="" class="w-[80px] ml-[15px] mt-[15px] dark:filter dark:brightness-0 dark:invert">
-                <div class="font-[Inter] text-[22px] text-[#404040] dark:text-[#FFF] mt-[12px] ml-[24px] text-left">dzu's Github</div>
+            <div class="w-[37.33vw] h-[37.33vw] xl:w-[218px] xl:h-[218px] shadow-xl rounded-[20px] bg-[#FFF] dark:bg-[#404040]">
+                <img src="./svg/github.svg" alt="" class="w:-[14.66vw] h-[14.66vw] ml-[3vw] mt-[3vw] xl:w-[80px] xl:h-[80px] xl:ml-[15px] xl:mt-[15px] dark:filter dark:brightness-0 dark:invert">
+                <div class="font-[Inter] text-[3.73vw] xl:text-[22px] text-[#404040] dark:text-[#FFF] mt-[1vw] ml-[4vw] xl:mt-[12px] xl:ml-[24px] text-left">dzu's Github</div>
                 <a href="https://github.com/dzuisk/" target="_blank">
-                    <div class="w-[80px] h-[40px] bg-[#404040] dark:bg-[#ffffff] font-[Inter] text-[18px] text-[#FFF] dark:text-[#404040] text-center ml-[24px] mt-[12px] rounded-[10px] leading-[40px]">Visit</div>
+                    <div class="w-[14.66vw] h-[7.46vw] xl:w-[80px] xl:h-[40px] bg-[#404040] dark:bg-[#ffffff] font-[Inter] text-[3.2vw] xl:text-[18px] text-[#FFF] dark:text-[#404040] text-center ml-[4vw] mt-[1.5vw] xl:ml-[24px] xl:mt-[12px] rounded-[10px] flex items-center justify-center xl:flex-none">Visit</div>
                 </a>
             </div>
         </div>
