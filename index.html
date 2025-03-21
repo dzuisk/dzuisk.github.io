@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dzu's personal webpage</title>
+    <title data-i18n="title">dzu's personal webpage</title>
     <link rel="shortcut icon" href="./image/偷摸零.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/output.css">
     <style>
@@ -11,18 +11,18 @@
     </style>
     <link rel="stylesheet" href="./css/player.css">
 </head>
-<body class="bg-[#DBEAFE] dark:bg-[#222] overflow-y-auto overflow-x-scroll">
+<body class="bg-[#DBEAFE] dark:bg-[#222] overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden scrollbar-width-none">
     <!-- intro -->
     <div class="w-[88vw] h-[150vw] xl:w-[1200px] xl:h-[620px] flex flex-col justify-center items-center text-center m-auto mt-[5vw] lg:mt-[100px]">
         <img src="./image/偷摸零.jpg" alt="" class="center w-[32vw] xl:w-[250px] rounded-full">
         <div class="text-[#082949] font-black font-[Inter]">
-            <span class="text-[9vw] xl:text-[96px] dark:text-white">Hello I’m dzu👋<br></span>
-            <span class="text-[4.5vw] xl:text-[64px] dark:text-white">An electronic enthusiast from China<br></span>
-            <span class="text-[4.5vw] xl:text-[80px] dark:text-white">18 y.o. / male / student / ESTJ</span>
+            <span class="block text-[9vw] xl:text-[96px] dark:text-white" data-i18n="hello">Hello I’m dzu👋</span>
+            <span class="block text-[4.5vw] xl:text-[64px] dark:text-white" data-i18n="intro">An electronic enthusiast from China</span>
+            <span class="block text-[4.5vw] xl:text-[80px] dark:text-white" data-i18n="age">18 y.o. / male / student / ESTJ</span>
         </div>
     </div>
     <!-- More -->
-    <div class="m-auto text-[20px] text-[#082949] font-black font-[Inter] mt-[10vw] lg:mt-[100px] text-center dark:text-white">More</div>
+    <div class="m-auto text-[20px] text-[#082949] font-black font-[Inter] mt-[10vw] lg:mt-[100px] text-center dark:text-white" data-i18n="more">More</div>
     <!-- cards -->
     <div class="xl:flex m-auto justify-center text-center items-center mt-[10vw] xl:mt-[300px] xl:mb-[50px]">
         <!-- left / top -->
@@ -30,9 +30,9 @@
             <!-- QQMusic -->
             <div class="hidden xl:inline-block xl:w-[218px] xl:h-[218px] bg-[#9DC7FF] shadow-xl rounded-[20px] mr-[20px] mb-[20px] dark:bg-[#404040]">
                 <img src="./svg/QQ音乐.svg" alt="" class="w-[80px] ml-[15px] mt-[15px]">
-                <div class="font-[Inter] text-[22px] text-white mt-[13px] ml-[25px] text-left text-shadow">dzu's favourites</div>
+                <div class="font-[Inter] text-[22px] text-white mt-[13px] ml-[25px] text-left text-shadow" data-i18n="qqmusic">dzu's favourites</div>
                 <a href="https://y.qq.com/n/ryqq/playlist/3716229321" target="_blank">
-                    <div class="w-[80px] h-[40px] bg-white font-[Inter] text-[18px] text-[#404040] text-center ml-[24px] mt-[13px] rounded-[10px] leading-[40px]">Enjoy</div>
+                    <div class="w-[80px] h-[40px] bg-white font-[Inter] text-[18px] text-[#404040] text-center ml-[24px] mt-[13px] rounded-[10px] leading-[40px]" data-i18n="enjoy">Enjoy</div>
                 </a>
             </div>
             <!-- MusicPlayer -->
@@ -80,7 +80,7 @@
             <audio id="audioPlayer"></audio>
             <!-- SelfIntroduction -->
             <div class="w-[80vw] h-[40vw] xl:w-[725px] xl:h-[340px] bg-[#9DC7FF] dark:bg-[#404040] shadow-xl rounded-[20px]">
-                <div class="pt-[2vw] ml-[2.6vw] xl:pt-0 xl:mt-[10px] xl:ml-[25px] text-left text-[3vw] xl:text-[26px] font-[Inter] text-white text-shadow">
+                <div class="pt-[2vw] ml-[2.6vw] xl:pt-0 xl:mt-[10px] xl:ml-[25px] text-left text-[3vw] xl:text-[26px] font-[Inter] text-white text-shadow" data-i18n="selfIntro">
                     Self introduction<br>
                     🌍: Mandarin/English/Teochew/Cantoness(a little)<br>
                     📖: Studying undergraduate in SZPU.<br>
@@ -103,14 +103,19 @@
             <!-- Github -->
             <div class="w-[37.33vw] h-[37.33vw] xl:w-[218px] xl:h-[218px] shadow-xl rounded-[20px] bg-[#FFF] dark:bg-[#404040]">
                 <img src="./svg/github.svg" alt="" class="w:-[14.66vw] h-[14.66vw] ml-[3vw] mt-[3vw] xl:w-[80px] xl:h-[80px] xl:ml-[15px] xl:mt-[15px] dark:filter dark:brightness-0 dark:invert">
-                <div class="font-[Inter] text-[3.73vw] xl:text-[22px] text-[#404040] dark:text-[#FFF] mt-[1vw] ml-[4vw] xl:mt-[12px] xl:ml-[24px] text-left">dzu's Github</div>
+                <div class="font-[Inter] text-[3.73vw] xl:text-[22px] text-[#404040] dark:text-[#FFF] mt-[1vw] ml-[4vw] xl:mt-[12px] xl:ml-[24px] text-left" data-i18n="github">dzu's Github</div>
                 <a href="https://github.com/dzuisk/" target="_blank">
-                    <div class="w-[14.66vw] h-[7.46vw] xl:w-[80px] xl:h-[40px] bg-[#404040] dark:bg-[#ffffff] font-[Inter] text-[3.2vw] xl:text-[18px] text-[#FFF] dark:text-[#404040] text-center ml-[4vw] mt-[1.5vw] xl:ml-[24px] xl:mt-[12px] rounded-[10px] flex items-center justify-center xl:flex-none">Visit</div>
+                    <div class="w-[14.66vw] h-[7.46vw] xl:w-[80px] xl:h-[40px] bg-[#404040] dark:bg-[#ffffff] font-[Inter] text-[3.2vw] xl:text-[18px] text-[#FFF] dark:text-[#404040] text-center ml-[4vw] mt-[1.5vw] xl:ml-[24px] xl:mt-[12px] rounded-[10px] flex items-center justify-center xl:flex-none" data-i18n="visit">Visit</div>
                 </a>
             </div>
         </div>
-    </div>
- 
-<script src="./js/player.js"></script>
+    </div>   
+    <!-- 新增切换按钮 -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <!-- 语言切换按钮 -->
+        <button id="languageToggle" class="w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:scale-110 transition-all font-bold">中/EN</button>
+    </div>   
+    <script src="./js/player.js"></script>
+    <script src="./js/translation.js"></script>
 </body>
 </html>
