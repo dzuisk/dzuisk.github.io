@@ -1,17 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="title">dzu's personal webpage</title>
     <link rel="shortcut icon" href="./image/偷摸零.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./src/output.css">
     <style>
+        [data-theme="dark"] {
+            --bg-color: #222;
+            --text-color: #ffffff;
+        }
+        [data-theme="light"] {
+            --bg-color: #DBEAFE;
+            --text-color: #082949;
+        }
+        /* 新增全局样式 */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
         .text-shadow {text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
     </style>
     <link rel="stylesheet" href="./css/player.css">
 </head>
-<body class="bg-[#DBEAFE] dark:bg-[#222] overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden scrollbar-width-none">
+<script>
+    // 初始化主题设置
+    localStorage.setItem('theme', 'dark');
+</script>
+<body class="transition-colors duration-300 overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden scrollbar-width-none">
     <!-- intro -->
     <div class="w-[88vw] h-[150vw] xl:w-[1200px] xl:h-[620px] flex flex-col justify-center items-center text-center m-auto mt-[5vw] lg:mt-[100px]">
         <img src="./image/偷摸零.jpg" alt="" class="center w-[32vw] xl:w-[250px] rounded-full">
@@ -112,9 +129,15 @@
     </div>   
     <!-- 新增切换按钮 -->
     <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <!-- 主题切换按钮 -->
+        <button id="themeToggle" class="w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg transition-all font-bold hover:bg-blue-600">
+            🌙
+        </button>
         <!-- 语言切换按钮 -->
-        <button id="languageToggle" class="w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:scale-110 transition-all font-bold">中/EN</button>
-    </div>   
+        <button id="languageToggle" class="w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg transition-all font-bold hover:bg-blue-600">中/EN</button>
+    </div>
+    <!-- 新增主题切换脚本 -->
+    <script src="./js/theme.js"></script>
     <script src="./js/player.js"></script>
     <script src="./js/translation.js"></script>
 </body>
