@@ -15,6 +15,17 @@
             --bg-color: #DBEAFE;
             --text-color: #082949;
         }
+        /* 新增歌单列表文字颜色 */
+        [data-theme="dark"] #songList {
+            color: #ffffff;
+            background-color: #404040; /* 保持与卡片背景一致 */
+        }
+        @media (prefers-color-scheme: light) {
+            :root:not([data-theme="dark"]) {
+                --bg-color: #DBEAFE;
+                --text-color: #082949;
+            }
+        }
         /* 新增全局样式 */
         body {
             background-color: var(--bg-color);
@@ -32,7 +43,7 @@
     <!-- intro -->
     <div class="w-[88vw] h-[150vw] xl:w-[1200px] xl:h-[620px] flex flex-col justify-center items-center text-center m-auto mt-[5vw] lg:mt-[100px]">
         <img src="./image/偷摸零.jpg" alt="" class="center w-[32vw] xl:w-[250px] rounded-full">
-        <div class="text-[#082949] font-black font-[Inter]">
+        <div class="text-[var(--text-color)] font-black font-[Inter]">
             <span class="block text-[9vw] xl:text-[96px] dark:text-white" data-i18n="hello">Hello I’m dzu👋</span>
             <span class="block text-[4.5vw] xl:text-[64px] dark:text-white" data-i18n="intro">An electronic enthusiast from China</span>
             <span class="block text-[4.5vw] xl:text-[80px] dark:text-white" data-i18n="age">18 y.o. / male / student / ESTJ</span>
