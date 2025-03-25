@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title">dzu's personal webpage</title>
+    <title data-i18n="title">Happy Birthday MuBo🎂</title>
     <link rel="shortcut icon" href="./image/偷摸零.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./src/output.css">
     <style>
+    /* 生日弹窗样式 */
+    #birthdayModal {
+      backdrop-filter: blur(5px);
+    }
+    #birthdayModal img {
+      border: 4px solid #3b82f6;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    #birthdayModal button {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
         [data-theme="dark"] {
             --bg-color: #222;
             --text-color: #ffffff;
@@ -40,6 +51,20 @@
     localStorage.setItem('theme', 'dark');
 </script>
 <body class="transition-colors duration-300 overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden scrollbar-width-none">
+    <!-- 生日弹窗 -->
+    <div id="birthdayModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[999] transition-opacity">
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl text-center max-w-md">
+        <img src="./images/5222cc8006dd73c0e5b7298a7e9dd287.jpeg" alt="MuBo头像" class="w-64 h-64 rounded-full mx-auto mb-4 object-cover">
+        <p class="text-2xl font-bold mb-4 dark:text-white">祝MuBo生日快乐！</p>
+        <button 
+          id="closeModal" 
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full transition-colors"
+          data-i18n="happyBirthday"
+        >
+          生日快乐🎂
+        </button>
+      </div>
+    </div>
     <!-- intro -->
     <div class="w-[88vw] h-[150vw] xl:w-[1200px] xl:h-[620px] flex flex-col justify-center items-center text-center m-auto mt-[5vw] lg:mt-[100px]">
         <img src="./image/偷摸零.jpg" alt="" class="center w-[32vw] xl:w-[250px] rounded-full">
@@ -151,5 +176,22 @@
     <script src="./js/theme.js"></script>
     <script src="./js/player.js"></script>
     <script src="./js/translation.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('birthdayModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    // 显示弹窗
+    modal.classList.remove('hidden');
+
+    // 关闭弹窗功能
+    closeBtn.addEventListener('click', () => {
+      modal.style.opacity = '0';
+      setTimeout(() => {
+        modal.remove();
+      }, 300);
+    });
+  });
+</script>
 </body>
 </html>
