@@ -1,10 +1,10 @@
 // 语言切换功能
 const translations = {
     'zh-CN': {
-        title: "dzu的个人网页",
+        title: "今天生日🎉dzu的个人网站",
         hello: "你好，我是dzu👋",
         intro: "一位来自中国的电子科技爱好者",
-        age: "18岁 / 男 / 学生 / ESTJ",
+        age: "19岁 / 男 / 学生 / ESTJ",
         more: "更多",
         selfIntro: `自我介绍<br>
             🌍: 普通话/英语/潮汕话/粤语(基础)<br>
@@ -20,10 +20,10 @@ const translations = {
         visit: "访问"
     },
     'en-US': {
-        title: "dzu's Personal Website",
+        title: "Today is my birthday! dzu's Personal Website",
         hello: "Hello I’m dzu👋",
         intro: "An electronic enthusiast from China",
-        age: "18 y.o. / male / student / ESTJ",
+        age: "19 y.o. / male / student / ESTJ",
         more: "More",
         selfIntro: `Self introduction<br>
             🌍: Mandarin/English/Teochew/Cantoness(basic)<br>
